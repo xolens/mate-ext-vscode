@@ -1,0 +1,26 @@
+{
+    "name": "mate-lang-snippets",
+    "displayName": "Mate Lang snippets",
+    "description": "VS Code snippets for Mate Programming language Class Syntaxt.",
+    "version": "0.0.1",
+    "publisher": "xolens",
+    "engines": {
+        "vscode": "^1.23.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "mate-lang",
+            "aliases": ["Mate Programming Language", "mate-lang"],
+            "extensions": [".mc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "mate-lang",
+            "scopeName": "source.mate.mc",
+            "path": "./syntaxes/mate-lang.tmLanguage.json"
+        }]
+    }
+}
