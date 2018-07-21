@@ -14,31 +14,28 @@
     "repository": {
         "keywords": {
             "patterns": [{
-                "name": "keyword.directive.mate-lang",
-                "match": "\\b(namespace|use|as|class)\\b"
+                "name": "keyword.special.mate-lang",
+                "match": "((?<!@)@[ \t\n\\\\])|((?<!@)@(?=\\())"
             }, {
-                "name": "keyword.modifier.mate-lang",
-                "match": "\\b(static|abstract|public|private|protected)\\b"
+                "name": "keyword.directive.mate-script",
+                "match": "(?<!@)@(namespace|use|require|var|include|as|value|define)\\b"
             }, {
                 "name": "keyword.control.mate-lang",
-                "match": "\\b(if|elseif|else|switch|case|break|foreach|empty|while|for|return)\\b"
-            }, {
-                "name": "keyword.type.mate-lang",
-                "match": "\\b(Object|String|Array|Number|Bool|Null|Void)\\b"
+                "match": "(?<!@)@(foreach|for|if|end|break|empty|continue|switch|case|default)\\b"
             }]
         },
         "strings": {
-            "name": "string.quoted.double.mate-lang",
-            "begin": "\"",
+            "name": "string.quoted.double.mate-script",
+            "begin": "(?<!@)@\"",
             "end": "\"",
             "patterns": [{
-                "name": "constant.character.escape.mate-lang",
+                "name": "constant.character.escape.mate-script",
                 "match": "\\\\."
             }]
         },
         "comments": {
             "name": "comment.multi.line.mate-lang",
-            "begin": "/\\*",
+            "begin": "(?<!@)@/\\*",
             "end": "\\*/",
             "patterns": [{
                 "name": "constant.character.escape.mate-lang",
@@ -46,5 +43,5 @@
             }]
         }
     },
-    "scopeName": "source.mate.mc"
+    "scopeName": "source.mate.ms"
 }

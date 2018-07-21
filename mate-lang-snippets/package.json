@@ -13,7 +13,7 @@
     "contributes": {
         "languages": [{
             "id": "mate-lang",
-            "aliases": ["Mate Programming Language", "mate-lang"],
+            "aliases": ["Mate Programming Language - Lang", "mate-lang"],
             "extensions": [".mc"],
             "configuration": "./language-configuration.json"
         }],
